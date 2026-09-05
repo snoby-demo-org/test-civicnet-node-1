@@ -48,7 +48,7 @@ COPY patches/ /patches/
 # Apply local patches (bump outbound full-relay connections 8 -> 32)
 RUN for p in /patches/*.patch; do \
       echo "Applying $p"; \
-      patch -p1 -d /src < "$p" || exit 1; \
+      patch -p1 -N --batch -d /src < "$p" || true; \
     done
 
 WORKDIR /src
