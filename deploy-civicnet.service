@@ -1,0 +1,27 @@
+[Unit]
+Description=CivicNet Node (test-civicnet-node-1)
+After=docker.service
+Requires=docker.service
+
+[Service]
+TimeoutStartSec=30
+Restart=always
+RestartSec=10
+# Recreate the container on each start so image/config changes are picked up.
+ExecStartPre=-/usr/bin/docker stop test-civicnet-node-1
+ExecStartPre=-/usr/bin/docker rm test-civicnet-node-1
+ExecStart=/usr/bin/docker run \
+  --name test-civicnet-node-1 \
+  -p 9332:9332 \
+  -p 9333:9333 \
+  -p 28332:28332 \
+  -p 28333:28333 \
+  -p 28334:28334 \
+  -p 28335:28335 \
+  -v test-civicnet-node-1-data:/root/.civicnet \
+  -v /root/.civicnet/civicnet.conf:/root/.civicnet/civicnet.conf:ro \
+  iotapi322/civicnet:latest
+ExecStop=/usr/bin/docker stop test-civicnet-node-1
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+---
+# This file is used to register this component in Backstage.
+# The whole file is a templated asset; the fields below are filled in when
+# this repo is created from the CivicNet Node template.
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test-civicnet-node-1
+  description: CivicNet node scaffolded from Backstage template
+  annotations:
+    github.com/project-slug: github.com?owner=snoby&repo=test-civicnet-node-1
+spec:
+  type: service
+  lifecycle: experimental
+  owner: guest
+  system: 
