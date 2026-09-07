@@ -8,9 +8,10 @@ metadata:
   name: test-civicnet-node-1
   description: CivicNet node scaffolded from Backstage template
   annotations:
-    github.com/project-slug: github.com?owner=snoby&repo=test-civicnet-node-1
+    github.com/project-slug: snoby/test-civicnet-node-1
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: service
   lifecycle: experimental
   owner: guest
-  system: 
+  system: civicnet-system
