@@ -1,6 +1,43 @@
 site_name: test-civicnet-node-1
+site_description: CivicNet node scaffolded from Backstage template — fully documented showcase
+site_url: http://backstage.viporlab.net
 docs_dir: docs
+repo_url: https://github.com/${{ values.repoUrl | replace("github.com/", "") }}
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
 nav:
-  - Home: index.md
-plugins:
-  - techdocs-core
+  - Overview: index.md
+  - Architecture: architecture.md
+  - Deployment:
+      - Runbook: deployment.md
+      - Configuration: configuration.md
+  - API & Monitoring: api.md
+  - Troubleshooting: troubleshooting.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - toc:
+      permalink: true

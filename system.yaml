@@ -1,0 +1,14 @@
+---
+# System entity: registers the system this CivicNet node belongs to. Register
+# this in Backstage (alongside catalog-info.yaml) to make the catalog graph show
+# the System node. Reference it from the component via spec.system.
+apiVersion: backstage.io/v1alpha1
+kind: System
+metadata:
+  name: civicnet-system
+  description: CivicNet node scaffolded from Backstage template — fully documented showcase
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+spec:
+  owner: guest
+  # domain: civicnet-system-domain   # optional parent grouping
