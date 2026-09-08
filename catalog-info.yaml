@@ -18,7 +18,9 @@ spec:
   lifecycle: experimental
   owner: guest
   system: civicnet-system
-  # If you register a matching API entity, this links the node to its API in the
-  # catalog graph. The graph view is one of Backstage's showcase features.
-  # providesApis:
-  #   - test-civicnet-node-1-rpc
+  # Links the node to its JSON-RPC API in the catalog graph and APIs tab.
+  providesApis:
+    - civicnet-node-rpc
+  # Models the node's on-disk data dependency.
+  dependsOn:
+    - resource:default/civicnet-node-data
