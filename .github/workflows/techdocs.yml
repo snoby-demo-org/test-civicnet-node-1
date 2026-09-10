@@ -17,7 +17,7 @@ on:
 
 jobs:
   publish:
-    runs-on: k8s-runner-civicnet
+    runs-on: k8s-runner
     steps:
       - name: Checkout
         uses: actions/checkout@v4

@@ -16,7 +16,7 @@
 | Component | `test-civicnet-node-1` |
 | System | `civicnet-system` |
 | Owner | `guest` |
-| Repository | [`https://github.com/snoby/test-civicnet-node-1`](https://github.com/snoby/test-civicnet-node-1) |
+| Repository | [`https://github.com/snoby-demo-org/test-civicnet-node-1`](https://github.com/snoby-demo-org/test-civicnet-node-1) |
 | RPC | port `9332` |
 | P2P | port `9333` |
 | Lifecycle | Experimental |
