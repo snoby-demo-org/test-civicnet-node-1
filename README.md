@@ -72,6 +72,4 @@ State in a docker volume `<name>-data`. Ports:
 | 28332-28335 | ZMQ (hashblock/hashtx/rawblock/rawtx) |
 
 ## Healthcheck
-
-`docker compose ps` shows health; the container runs `healthcheck.sh`
-(check RPC reachable + node synced).
+force a rebuild
